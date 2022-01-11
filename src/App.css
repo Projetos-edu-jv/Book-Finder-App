@@ -1,12 +1,32 @@
-.App {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+.container {
   text-align: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  padding: 0.6rem;
+  border-radius: 3px;
 }
 
+input {
+  background-color: rgb(187, 187, 187);
+  padding: 0.4rem auto;
+}
+
+.lista {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Reuso dessa parte */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -24,11 +44,9 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.App-link { color: #61dafb; }
 
-@keyframes App-logo-spin {
+@keyframes spinner {
   from {
     transform: rotate(0deg);
   }
