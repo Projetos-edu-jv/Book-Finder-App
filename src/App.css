@@ -18,19 +18,37 @@ button {
 
 input {
   background-color: rgb(187, 187, 187);
-  padding: 0.4rem auto;
+  padding: 0.3rem;
+  margin-right: 0.5rem;
+  border: 2px solid gray;
+  border-radius: 2px;
+}
+
+.main-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .lista {
   display: flex;
+  height: 100vh;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.lista .card {
+	display: flex;
+	flex-direction: column;
+	width: 35%;
+	height: 45%;
 }
 
 /* Reuso dessa parte */
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  .App-logo { animation: App-logo-spin infinite 20s linear; }
 }
 
 .App-header {
@@ -46,11 +64,8 @@ input {
 
 .App-link { color: #61dafb; }
 
-@keyframes spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes spinner
+{
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

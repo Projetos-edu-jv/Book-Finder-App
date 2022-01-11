@@ -28,17 +28,18 @@ export default function App()
     <>
       <div className="container">
           <h2>Pesquisa de livros</h2>
-          <label htmlFor="book">Nome do livro: </label>
-          <input type="text" name="book" id="book" onChange={ (e) => setPesquisa(e.target.value) }/>
-          <button onClick={ () => setPesq(pesquisa) }>Pesquisar?</button>
+		  <div className="main-header">
+		      <input placeholder="Nome do livro" type="text" name="book" id="book" onChange={ (e) => setPesquisa(e.target.value) }/>
+			  <button onClick={ () => setPesq(pesquisa) }>Pesquisar</button>
+		  </div>
 
           { data !== undefined &&
             <div className="lista">
-            {data.map((data: any) => {
+            { data.map( (data: any) => {
               return (
-              <div>
-                <h1>{data.volumeInfo.title}</h1>
-                {data.volumeInfo.subtitle && <h2>data.volumeInfo.subtitle</h2>}
+              <div className="card">
+                <h3>{ data.volumeInfo.title }</h3>
+                {data.volumeInfo.subtitle && <h4>data.volumeInfo.subtitle</h4>}
               </div>
               )
             })}
