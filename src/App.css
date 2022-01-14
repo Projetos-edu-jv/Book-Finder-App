@@ -1,27 +1,15 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
 }
 
 .container {
-  text-align: center;
-  height: 100vh;
-}
-
-button {
-  padding: 0.6rem;
-  border-radius: 3px;
-}
-
-input {
-  background-color: rgb(187, 187, 187);
-  padding: 0.3rem;
-  margin-right: 0.5rem;
-  border: 2px solid gray;
-  border-radius: 2px;
+	text-align: center;
+	height: fit-content;
+	background-color: darkGray;
 }
 
 .main-header {
@@ -30,42 +18,78 @@ input {
 	align-items: center;
 }
 
+.main-header > h2 {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.main-header > input {
+	background-color: rgb(187, 187, 187);
+	padding: 0.3rem;
+	border: 2px solid gray;
+	border-radius: 2px;
+	width: 28vw;
+	margin-bottom: 2rem
+}
+
+.main-header > button {
+	padding: 0.6rem;
+	border-radius: 3px;
+}
+
 .lista {
-  display: flex;
-  height: 100vh;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 1.5rem;
+	display: flex;
+	height: auto;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 .lista .card {
+	background-color: white;
 	display: flex;
 	flex-direction: column;
-	width: 35%;
-	height: 45%;
+	width: min-content;
+	height: auto;
+	border: 2px solid gray;
+	margin: 3% 1%;
+	padding-top: .8vw;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	padding-bottom: 1vw;
+	border-radius: 4px;
+	box-shadow: 0px 0px 13px -5px black;
+}
+
+.lista .card > h3 {
+	margin-bottom: 1rem;
+}
+
+.lista .card > h4 {
+	margin-bottom: 1rem;
+	font-weight: normal;
 }
 
 /* Reuso dessa parte */
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo { animation: App-logo-spin infinite 20s linear; }
+	.App-logo { animation: App-logo-spin infinite 20s linear; }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link { color: #61dafb; }
 
 @keyframes spinner
 {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
 }
